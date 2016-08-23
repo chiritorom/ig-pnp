@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ccr.igpnp.dao.impl.DocumentDAOImpl;
+import com.ccr.igpnp.dao.impl.IdentityCardDAOImpl;
 
 /**
  * Servlet implementation class Index
@@ -47,7 +48,7 @@ public class Index extends HttpServlet {
 		String page = String.valueOf(request.getParameter("page"));
 		
 		DocumentDAOImpl objDocument = new DocumentDAOImpl();
-		
+		IdentityCardDAOImpl objIdentityCard = new IdentityCardDAOImpl();
 		
 		switch(page) {
 			case "null":
@@ -64,6 +65,7 @@ public class Index extends HttpServlet {
 				break;
 			case "registrar-denuncia":
 				request.setAttribute("breadcrumb", "Registrar denuncia");
+				request.setAttribute("findAllIdentityCard", objIdentityCard.findAll());
 				request.getRequestDispatcher("ig-registrar-denuncia.jsp").forward(request, response);
 				break;
 			default:
