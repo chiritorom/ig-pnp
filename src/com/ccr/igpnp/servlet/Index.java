@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ccr.igpnp.dao.impl.DocumentDAOImpl;
+import com.ccr.igpnp.dao.impl.GenderDAOImpl;
 import com.ccr.igpnp.dao.impl.IdentityCardDAOImpl;
 
 /**
@@ -49,6 +50,7 @@ public class Index extends HttpServlet {
 		
 		DocumentDAOImpl objDocument = new DocumentDAOImpl();
 		IdentityCardDAOImpl objIdentityCard = new IdentityCardDAOImpl();
+		GenderDAOImpl objGender = new GenderDAOImpl();
 		
 		switch(page) {
 			case "null":
@@ -66,6 +68,7 @@ public class Index extends HttpServlet {
 			case "registrar-denuncia":
 				request.setAttribute("breadcrumb", "Registrar denuncia");
 				request.setAttribute("findAllIdentityCard", objIdentityCard.findAll());
+				request.setAttribute("findAllGender", objGender.findAll());
 				request.getRequestDispatcher("ig-registrar-denuncia.jsp").forward(request, response);
 				break;
 			default:

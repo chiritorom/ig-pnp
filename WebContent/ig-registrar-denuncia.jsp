@@ -20,17 +20,17 @@
 										<div class="row">
 											<div class="col-md-2">
 												<label>Nombres:</label>
-				                                <input type="text" class="form-control" placeholder="Nombres">
+				                                <input type="text" class="form-control">
 											</div>
 			
 											<div class="col-md-2">
 												<label>Apellido paterno:</label>
-				                                <input type="text" class="form-control" placeholder="Ap. paterno">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-2">
 												<label>Apellido materno:</label>
-				                                <input type="text" class="form-control" placeholder="Ap. materno">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-sm-2">
@@ -45,15 +45,16 @@
 											
 											<div class="col-md-2">
 												<label>Nro. doc. de identidad:</label>
-				                                <input type="text" class="form-control" placeholder="Doc. de identidad">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-2">
 												<label>Género:</label>
 				                                <select class="form-control tabindex="2">
 				                                    <option value="" selected>Seleccionar</option>
-				                                    <option value="Cambodia">Masculino</option> 
-				                                    <option value="Cameroon">Femenino</option> 
+				                                    <c:forEach items="${findAllGender}" var="findAllGender">
+				                                    <option value="${findAllGender.genderId}"><c:out value="${findAllGender.description}" /></option>
+				                                    </c:forEach>
 				                                </select>
 											</div>
 										</div>
@@ -63,7 +64,7 @@
 										<div class="row">
 											<div class="col-md-2">
 												<label>Fecha de nacimiento:</label>
-				                                <input type="text" class="form-control" placeholder="col-md-10">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-2">
@@ -77,17 +78,17 @@
 											
 											<div class="col-md-2">
 												<label>Ocupación:</label>
-				                                <input type="text" class="form-control" placeholder="col-md-10">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-3">
 												<label>Centro laboral:</label>
-				                                <input type="text" class="form-control" placeholder="col-md-10">
+				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-3">
 												<label>Correo:</label>
-				                                <input type="text" class="form-control" placeholder="col-md-10">
+				                                <input type="text" class="form-control">
 											</div>
 										</div>
 									</div>

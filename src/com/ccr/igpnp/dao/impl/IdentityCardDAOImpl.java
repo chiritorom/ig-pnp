@@ -16,6 +16,7 @@ public class IdentityCardDAOImpl implements IdentityCardDAO {
     PreparedStatement ps = null;
     ResultSet rs = null;
     
+    @Override
     public List<IdentityCard> findAll() {
     	
     	List<IdentityCard> listIdentityCard = new ArrayList<IdentityCard>();
