@@ -30,7 +30,8 @@ $(function() {
 		language: {
 			search: '<span>Buscar:</span> _INPUT_',
 			lengthMenu: '<span>Mostrar:</span> _MENU_',
-			paginate: { 'first': 'Primero', 'last': 'Ultimo', 'next': '>', 'previous': '<' }
+			paginate: { 'first': 'Primero', 'last': 'Ultimo', 'next': '>', 'previous': '<' },
+			info: "Mostrando página _PAGE_ de _PAGES_",
 		}
 	});
 

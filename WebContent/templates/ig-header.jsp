@@ -244,8 +244,8 @@
 				<!-- Main navigation -->
 				<ul class="navigation">
 					<li><a href="/IG-PNP/dashboard"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
-					<li><a href="/IG-PNP/ver-denuncias"><span>Ver denuncias</span> <i class="icon-numbered-list"></i></a></li>
-					<li><a href="/IG-PNP/registrar-denuncia"><span>Registrar denuncia</span> <i class="icon-user-plus"></i></a></li>	
+					<li><a href="/IG-PNP/bandeja-de-expedientes"><span>Bandeja de expedientes</span> <i class="icon-numbered-list"></i></a></li>
+					<li><a href="/IG-PNP/crear-expediente"><span>Crear expediente</span> <i class="icon-user-plus"></i></a></li>	
 				</ul>
 				<!-- /main navigation -->
 				

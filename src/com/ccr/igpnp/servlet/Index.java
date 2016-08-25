@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ccr.igpnp.dao.impl.DocumentDAOImpl;
 import com.ccr.igpnp.dao.impl.GenderDAOImpl;
 import com.ccr.igpnp.dao.impl.IdentityCardDAOImpl;
+import com.ccr.igpnp.dao.impl.MaritalStatusDAOImpl;
 
 /**
  * Servlet implementation class Index
@@ -51,6 +52,7 @@ public class Index extends HttpServlet {
 		DocumentDAOImpl objDocument = new DocumentDAOImpl();
 		IdentityCardDAOImpl objIdentityCard = new IdentityCardDAOImpl();
 		GenderDAOImpl objGender = new GenderDAOImpl();
+		MaritalStatusDAOImpl objMaritalStatus = new MaritalStatusDAOImpl();
 		
 		switch(page) {
 			case "null":
@@ -60,16 +62,17 @@ public class Index extends HttpServlet {
 				request.setAttribute("breadcrumb", "Dashboard");
 				request.getRequestDispatcher("ig-principal.jsp").forward(request, response);
 				break;
-			case "ver-denuncias":
-				request.setAttribute("breadcrumb", "Ver denuncias");
+			case "bandeja-de-expedientes":
+				request.setAttribute("breadcrumb", "Bandeja de expedientes");
 				request.setAttribute("findAllDocument", objDocument.findAll());
-				request.getRequestDispatcher("ig-listado-denuncias.jsp").forward(request, response);
+				request.getRequestDispatcher("ig-bandeja-expedientes.jsp").forward(request, response);
 				break;
-			case "registrar-denuncia":
-				request.setAttribute("breadcrumb", "Registrar denuncia");
+			case "crear-expediente":
+				request.setAttribute("breadcrumb", "Crear expediente");
 				request.setAttribute("findAllIdentityCard", objIdentityCard.findAll());
 				request.setAttribute("findAllGender", objGender.findAll());
-				request.getRequestDispatcher("ig-registrar-denuncia.jsp").forward(request, response);
+				request.setAttribute("findAllMaritalStatus", objMaritalStatus.findAll());
+				request.getRequestDispatcher("ig-crear-expediente.jsp").forward(request, response);
 				break;
 			default:
 				request.getRequestDispatcher("404.jsp").forward(request, response);

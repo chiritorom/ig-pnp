@@ -46,6 +46,6 @@
 <script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
 
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/application.js"></script>
+<script type="text/javascript" src="js/application.js" charset="UTF-8"></script>
 </body>
 </html>

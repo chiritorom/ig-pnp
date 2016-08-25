@@ -9,9 +9,9 @@
 						<div class="tabbable">
 							<ul class="nav nav-pills nav-justified">
 								<li class="active"><a href="#panel-pill1" data-toggle="tab"><i class="icon-accessibility"></i> 1. Registrar denunciante</a></li>
-								<li class="disabled"><a href="#panel-pill2" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
-								<li class="disabled"><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
-								<li class="disabled"><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill2"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill3"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill3"><i class="icon-stack"></i> Profile</a></li>
 							</ul>
 
 							<div class="tab-content pill-content">
@@ -71,19 +71,10 @@
 												<label>Estado civíl:</label>
 				                                <select class="form-control" tabindex="2">
 				                                    <option value="" selected>Seleccionar</option>
-				                                    <option value="Cambodia">Masculino</option> 
-				                                    <option value="Cameroon">Femenino</option> 
+				                                    <c:forEach items="${findAllMaritalStatus}" var="findAllMS">
+				                                    <option value="${findAllMS.maritalStatusId}"><c:out value="${findAllMS.description}" /></option>
+				                                    </c:forEach>
 				                                </select>
-											</div>
-											
-											<div class="col-md-2">
-												<label>Ocupación:</label>
-				                                <input type="text" class="form-control">
-											</div>
-											
-											<div class="col-md-3">
-												<label>Centro laboral:</label>
-				                                <input type="text" class="form-control">
 											</div>
 											
 											<div class="col-md-3">
@@ -116,5 +107,8 @@
 				</div>
 			</form>
 			<!-- /input label (default form) -->
+			<script>
+				
+			</script>
 	
 	<c:import url="templates/ig-footer.jsp" />

@@ -21,7 +21,7 @@
 				                    	<c:forEach items="${findAllDocument}" var="findAllDoc" >
 					                        <tr>
 					                            <td>1</td>
-					                            <td><c:out value="${findAllDoc.documentId}" /></td>
+					                            <td>00001</td>
 					                            <td>12345</td>
 					                            <td><c:out value="${findAllDoc.person.lastName}, ${findAllDoc.person.firstName}" /></td>
 					                            <td><c:out value="${findAllDoc.documentDate}" /></td>
