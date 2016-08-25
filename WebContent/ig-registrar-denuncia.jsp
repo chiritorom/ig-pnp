@@ -9,9 +9,9 @@
 						<div class="tabbable">
 							<ul class="nav nav-pills nav-justified">
 								<li class="active"><a href="#panel-pill1" data-toggle="tab"><i class="icon-accessibility"></i> 1. Registrar denunciante</a></li>
-								<li><a href="#panel-pill2" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
-								<li><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
-								<li><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill2" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
+								<li class="disabled"><a href="#panel-pill3" data-toggle="tab"><i class="icon-stack"></i> Profile</a></li>
 							</ul>
 
 							<div class="tab-content pill-content">
