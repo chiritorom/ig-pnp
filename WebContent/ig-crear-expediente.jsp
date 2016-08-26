@@ -4,111 +4,190 @@
 	<!-- Input label (default form) -->
 			<form role="form" action="#">
 	            <div class="panel panel-default">
-	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-pencil3"></i> Pasos para registrar una denuncia</h6></div>
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-pencil3"></i> Agregar documento</h6></div>
 	                <div class="panel-body">
-						<div class="tabbable">
-							<ul class="nav nav-pills nav-justified">
-								<li class="active"><a href="#panel-pill1" data-toggle="tab"><i class="icon-accessibility"></i> 1. Registrar denunciante</a></li>
-								<li class="disabled"><a href="#panel-pill2"><i class="icon-stack"></i> Profile</a></li>
-								<li class="disabled"><a href="#panel-pill3"><i class="icon-stack"></i> Profile</a></li>
-								<li class="disabled"><a href="#panel-pill3"><i class="icon-stack"></i> Profile</a></li>
-							</ul>
-
-							<div class="tab-content pill-content">
-								<div class="tab-pane fade in active" id="panel-pill1">
-									<div class="form-group">
-										<div class="row">
-											<div class="col-md-2">
-												<label>Nombres:</label>
-				                                <input type="text" class="form-control">
-											</div>
-			
-											<div class="col-md-2">
-												<label>Apellido paterno:</label>
-				                                <input type="text" class="form-control">
-											</div>
-											
-											<div class="col-md-2">
-												<label>Apellido materno:</label>
-				                                <input type="text" class="form-control">
-											</div>
-											
-											<div class="col-sm-2">
-												<label>Documento de identidad: </label>
-				                                <select class="form-control" tabindex="2">
-				                                    <option value="" selected>Seleccionar</option> 
-				                                    <c:forEach items="${findAllIdentityCard}" var="findAllID">
-				                                    <option value="${findAllID.identityCardId}"><c:out value="${findAllID.description}" /></option>
-				                                    </c:forEach>
-				                                </select>
-											</div>
-											
-											<div class="col-md-2">
-												<label>Nro. doc. de identidad:</label>
-				                                <input type="text" class="form-control">
-											</div>
-											
-											<div class="col-md-2">
-												<label>Género:</label>
-				                                <select class="form-control tabindex="2">
-				                                    <option value="" selected>Seleccionar</option>
-				                                    <c:forEach items="${findAllGender}" var="findAllGender">
-				                                    <option value="${findAllGender.genderId}"><c:out value="${findAllGender.description}" /></option>
-				                                    </c:forEach>
-				                                </select>
-											</div>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<div class="row">
-											<div class="col-md-2">
-												<label>Fecha de nacimiento:</label>
-				                                <input type="text" class="form-control">
-											</div>
-											
-											<div class="col-md-2">
-												<label>Estado civíl:</label>
-				                                <select class="form-control" tabindex="2">
-				                                    <option value="" selected>Seleccionar</option>
-				                                    <c:forEach items="${findAllMaritalStatus}" var="findAllMS">
-				                                    <option value="${findAllMS.maritalStatusId}"><c:out value="${findAllMS.description}" /></option>
-				                                    </c:forEach>
-				                                </select>
-											</div>
-											
-											<div class="col-md-3">
-												<label>Correo:</label>
-				                                <input type="text" class="form-control">
-											</div>
-										</div>
-									</div>
-			
-			                        <div class="form-actions text-right">
-			                        	<input type="submit" value="Verificar persona" class="btn btn-primary">
-			                        	<input type="submit" value="Siguiente" class="btn btn-primary">
-			                        </div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-2">
+									<label>Nº del documento:</label>
+	                                <input type="text" class="form-control">
 								</div>
 
-								<div class="tab-pane fade" id="panel-pill2">
-									Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+								<div class="col-md-2">
+									<label>Fecha del documento:</label>
+	                                <input type="text" class="form-control">
 								</div>
-
-								<div class="tab-pane fade" id="panel-pill3">
-									Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+								
+								<div class="col-md-2">
+									<label>Nº de folio:</label>
+	                                <input type="text" class="form-control">
 								</div>
-
-								<div class="tab-pane fade" id="panel-pill4">
-									Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.
+								
+								<div class="col-sm-3">
+									<label>Tipo de documento: </label>
+	                                <select class="form-control" tabindex="2">
+	                                    <option value="" selected>Seleccionar</option> 
+	                                    <c:forEach items="${findAllIdentityCard}" var="findAllID">
+	                                    <option value="${findAllID.identityCardId}"><c:out value="${findAllID.description}" /></option>
+	                                    </c:forEach>
+	                                </select>
+								</div>
+								
+								<div class="col-md-3">
+									<label>Procedencia:</label>
+	                                <input type="text" class="form-control">
 								</div>
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Asunto:</label>
+	                                <input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						
+						<!-- Table with toolbar -->
+			            <div class="panel panel-success panel-den">
+			                <div class="panel-heading"><h6 class="panel-title"><i class="icon-rating3"></i> Denunciante</h6></div>
+			                <ul class="panel-toolbar">
+			                    <li><a class="search-modal"><i class="icon-search3"></i> Buscar</a></li>
+			                    <li><a><i class="icon-plus"></i> Agregar</a></li>
+			                </ul>
+			                <div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre</th>
+											<th>Apellido</th>
+											<th>DNI</th>
+											<th>Column name</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+				        </div>
+				        <!-- /table with toolbar -->
+				        
+				        <!-- Table with toolbar -->
+			            <div class="panel panel-danger panel-den">
+			                <div class="panel-heading"><h6 class="panel-title"><i class="icon-rating3"></i> Denunciado</h6></div>
+			                <ul class="panel-toolbar">
+			                    <li><a class="search-modal"><i class="icon-search3"></i> Buscar</a></li>
+			                    <li><a ><i class="icon-plus"></i> Agregar</a></li>
+			                </ul>
+			                <div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Column name</th>
+											<th>Column name</th>
+											<th>Column name</th>
+											<th>Column name</th>
+											<th>Column name</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Row 1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+										<tr>
+											<td>Row 1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+										<tr>
+											<td>Row 1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+										<tr>
+											<td>Row 1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+										<tr>
+											<td>Row 1</td>
+											<td>Row 2</td>
+											<td>Row 3</td>
+											<td>Row 4</td>
+											<td>Row 5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+				        </div>
+				        <!-- /table with toolbar -->
+
+                        <div class="form-actions text-right">
+                        	<input type="submit" value="Agregar" class="btn btn-primary">
+                        </div>
 				    </div>
 				</div>
 			</form>
 			<!-- /input label (default form) -->
+			
+			<!-- Small modal -->
+			<div id="small_modal" class="modal fade" tabindex="-1" role="dialog">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title"><i class="icon-accessibility"></i> Buscar</h4>
+						</div>
+
+						<div class="modal-body with-padding">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-12">
+										<label>Buscar por DNI:</label>
+		                                <input type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+							<button class="btn btn-primary">Agregar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /small modal -->
+			
 			<script>
+				$(".panel-den:first-child .search-modal").on("click", function(){
+					//$("#small_modal").modal("show");
+				});
 				
+				$(".panel-den:last-child .search-modal").on("click", function(){
+					//$("#small_modal").modal("show");
+					alert("hola");
+				});
 			</script>
+			
 	
 	<c:import url="templates/ig-footer.jsp" />
