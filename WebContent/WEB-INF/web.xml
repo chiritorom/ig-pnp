@@ -31,4 +31,13 @@
     <servlet-name>Index</servlet-name>
     <url-pattern>/index.jsp</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AJAXLogin</servlet-name>
+    <servlet-class>com.ccr.igpnp.servlet.AJAXLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AJAXLogin</servlet-name>
+    <url-pattern>/IG-PNP/AJAXLogin</url-pattern>
+  </servlet-mapping>
 </web-app>

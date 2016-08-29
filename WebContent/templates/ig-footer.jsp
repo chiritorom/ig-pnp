@@ -47,5 +47,6 @@
 
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/application.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/cr.js" charset="UTF-8"></script>
 </body>
 </html>

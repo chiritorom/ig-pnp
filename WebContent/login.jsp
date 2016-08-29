@@ -1,19 +1,107 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Inspectoría General - PNP</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="css/londinium-theme.css" rel="stylesheet" type="text/css">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link href="css/icons.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-	
+	<link href="css/cr.css" rel="stylesheet" type="text/css">
+</head>
+<body class="full-width page-condensed">
+
+	<!-- Navbar -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-right">
+				<span class="sr-only">Toggle navbar</span>
+				<i class="icon-grid3"></i>
+			</button>
+
+			<a class="navbar-brand" href="#">Inspectoría General</a>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right collapse">
+			<li><a href="#"><i class="icon-screen2"></i></a></li>
+			<li><a href="#"><i class="icon-paragraph-justify2"></i></a></li>
+			<li>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
+                <ul class="dropdown-menu icons-right dropdown-menu-right">
+					<li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+					<li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+					<li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+					<li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                </ul>
+			</li>
+		</ul>
+	</div>
+	<!-- /navbar -->
+
+	<!-- Login wrapper -->
+	<div class="login-wrapper">
+    	<form>
+			<div class="popup-header">
+				<a href="#" class="pull-left"><i class="icon-user-plus"></i></a>
+				<span class="text-semibold">User Login</span>
+				<div class="btn-group pull-right">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
+                    <ul class="dropdown-menu icons-right dropdown-menu-right">
+						<li><a href="#"><i class="icon-people"></i> Change user</a></li>
+						<li><a href="#"><i class="icon-info"></i> Forgot password?</a></li>
+						<li><a href="#"><i class="icon-support"></i> Contact admin</a></li>
+						<li><a href="#"><i class="icon-wrench"></i> Settings</a></li>
+                    </ul>
+				</div>
+			</div>
+			<div class="well">
+				<div class="form-group has-feedback">
+					<label>Usuario</label>
+					<input type="text" name="user" class="form-control" placeholder="Usuario">
+					<i class="icon-users form-control-feedback"></i>
+				</div>
+
+				<div class="form-group has-feedback">
+					<label>Contraseña</label>
+					<input type="password" name="password" class="form-control" placeholder="Contraseña">
+					<i class="icon-lock form-control-feedback"></i>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="alert alert-danger fade in block-inner">
+			            </div>
+					</div>
+				</div>
+
+				<div class="row form-actions">
+					<div class="col-xs-12">
+						<button type="submit" class="btn btn-warning pull-right"><i class="icon-menu2"></i> Ingresar</button>
+					</div>
+				</div>
+			</div>
+    	</form>
+	</div>  
+	<!-- /login wrapper -->
+
+
+    <!-- Footer -->
+    <div class="footer clearfix">
+        <div class="pull-left">&copy; 2016. Inspectoría General by <a href="http://themeforest.net/user/Kopyov">Eugene Kopyov</a></div>
+    	<div class="pull-right icons-group">
+    		<a href="#"><i class="icon-screen2"></i></a>
+    		<a href="#"><i class="icon-balance"></i></a>
+    		<a href="#"><i class="icon-cog3"></i></a>
+    	</div>
+    </div>
+    <!-- /footer -->
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	
@@ -47,96 +135,6 @@
 	
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/application.js"></script>
-</head>
-<body class="full-width page-condensed">
-
-	<!-- Navbar -->
-	<div class="navbar navbar-inverse" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-right">
-				<span class="sr-only">Toggle navbar</span>
-				<i class="icon-grid3"></i>
-			</button>
-
-			<a class="navbar-brand" href="#">Inspectoría General</a>
-		</div>
-
-		<ul class="nav navbar-nav navbar-right collapse">
-			<li><a href="#"><i class="icon-screen2"></i></a></li>
-			<li><a href="#"><i class="icon-paragraph-justify2"></i></a></li>
-			<li>
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
-                <ul class="dropdown-menu icons-right dropdown-menu-right">
-					<li><a href="#"><i class="icon-cogs"></i> This is</a></li>
-					<li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
-					<li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
-					<li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
-                </ul>
-			</li>
-		</ul>
-	</div>
-	<!-- /navbar -->
-
-	<!-- Login wrapper -->
-	<div class="login-wrapper">
-    	<form action="/IG-PNP/dashboard" role="form">
-			<div class="popup-header">
-				<a href="#" class="pull-left"><i class="icon-user-plus"></i></a>
-				<span class="text-semibold">User Login</span>
-				<div class="btn-group pull-right">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
-                    <ul class="dropdown-menu icons-right dropdown-menu-right">
-						<li><a href="#"><i class="icon-people"></i> Change user</a></li>
-						<li><a href="#"><i class="icon-info"></i> Forgot password?</a></li>
-						<li><a href="#"><i class="icon-support"></i> Contact admin</a></li>
-						<li><a href="#"><i class="icon-wrench"></i> Settings</a></li>
-                    </ul>
-				</div>
-			</div>
-			<div class="well">
-				<div class="form-group has-feedback">
-					<label>Usuario</label>
-					<input type="text" class="form-control" placeholder="Usuario">
-					<i class="icon-users form-control-feedback"></i>
-				</div>
-
-				<div class="form-group has-feedback">
-					<label>Contraseña</label>
-					<input type="password" class="form-control" placeholder="Contraseña">
-					<i class="icon-lock form-control-feedback"></i>
-				</div>
-
-				<div class="row form-actions">
-					<div class="col-xs-6">
-						<div class="checkbox checkbox-success">
-						<label>
-							<input type="checkbox" class="styled">
-							Remember me
-						</label>
-						</div>
-					</div>
-
-					<div class="col-xs-6">
-						<button type="submit" class="btn btn-warning pull-right"><i class="icon-menu2"></i> Sign in</button>
-					</div>
-				</div>
-			</div>
-    	</form>
-	</div>  
-	<!-- /login wrapper -->
-
-
-    <!-- Footer -->
-    <div class="footer clearfix">
-        <div class="pull-left">&copy; 2016. Inspectoría General by <a href="http://themeforest.net/user/Kopyov">Eugene Kopyov</a></div>
-    	<div class="pull-right icons-group">
-    		<a href="#"><i class="icon-screen2"></i></a>
-    		<a href="#"><i class="icon-balance"></i></a>
-    		<a href="#"><i class="icon-cog3"></i></a>
-    	</div>
-    </div>
-    <!-- /footer -->
-
-
+	<script type="text/javascript" src="js/process.js" charset="UTF-8"></script>
 </body>
 </html>

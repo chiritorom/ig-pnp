@@ -1,6 +1,6 @@
 package com.ccr.igpnp.model;
 
-public class Person {
+public class PersonDTO {
 	private int personId;
 	private String firstName;
 	private String lastName;
@@ -11,11 +11,11 @@ public class Person {
 	private int identityCardId;
 	private String numberIdentityCard;
 	
-	public Person() {
+	public PersonDTO() {
 		
 	}
 
-	public Person(int personId, String firstName, String lastName, String birthdate, int genderId, String email,
+	public PersonDTO(int personId, String firstName, String lastName, String birthdate, int genderId, String email,
 			int geographicalLocationId, int identityCardId, String numberIdentityCard) {
 		super();
 		this.personId = personId;

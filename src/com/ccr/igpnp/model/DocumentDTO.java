@@ -2,7 +2,7 @@ package com.ccr.igpnp.model;
 
 public class DocumentDTO {
 	private int documentId;
-	private Person person;
+	private PersonDTO person;
 	private String documentDate;
 	private String documentNumber;
 	private String destination;
@@ -17,7 +17,7 @@ public class DocumentDTO {
 		
 	}
 
-	public DocumentDTO(int documentId, Person person, String documentDate, String documentNumber, String destination,
+	public DocumentDTO(int documentId, PersonDTO person, String documentDate, String documentNumber, String destination,
 			int documentOriginId, int folioNumber, String registerDate, String subject, int documentTypeId,
 			int documentStateId) {
 		super();
@@ -42,11 +42,11 @@ public class DocumentDTO {
 		this.documentId = documentId;
 	}
 
-	public Person getPerson() {
+	public PersonDTO getPerson() {
 		return person;
 	}
 
-	public void setPerson(Person person) {
+	public void setPerson(PersonDTO person) {
 		this.person = person;
 	}
 

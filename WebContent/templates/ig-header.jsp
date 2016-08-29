@@ -1,22 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page session="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-<title>Sistema Inspectoría General</title>
-
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/londinium-theme.css" rel="stylesheet" type="text/css">
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<link href="css/icons.css" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<title>Sistema Inspectoría General</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/londinium-theme.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="css/icons.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -210,7 +209,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img src="http://placehold.it/300">
 						<div class="user-info">
-							Madison Gartner <span>Web Developer</span>
+							<c:out value="Hola ${User.username}" /> <span>General</span>
 						</div>
 					</a>
 					<div class="popup dropdown-menu dropdown-menu-right">

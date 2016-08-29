@@ -50,12 +50,14 @@
 						</div>
 						
 						<!-- Table with toolbar -->
-			            <div class="panel panel-success panel-den">
-			                <div class="panel-heading"><h6 class="panel-title"><i class="icon-rating3"></i> Denunciante</h6></div>
-			                <ul class="panel-toolbar">
-			                    <li><a class="search-modal"><i class="icon-search3"></i> Buscar</a></li>
-			                    <li><a><i class="icon-plus"></i> Agregar</a></li>
-			                </ul>
+			            <div class="panel panel-success panel-de">
+			                <div class="panel-heading">
+			                	<h6 class="panel-title"><i class="icon-rating3"></i> Denunciante</h6>
+			                	<div class="pull-right">
+				                	<a class="btn btn-xs btn-default">Buscar denunciante</a>
+				                	<a class="btn btn-xs btn-default">Agregar denunciante</a>
+			                	</div>
+			                </div>
 			                <div class="table-responsive">
 								<table class="table table-bordered">
 									<thead>
@@ -64,17 +66,10 @@
 											<th>Nombre</th>
 											<th>Apellido</th>
 											<th>DNI</th>
-											<th>Column name</th>
+											<th>Eliminar</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -82,12 +77,14 @@
 				        <!-- /table with toolbar -->
 				        
 				        <!-- Table with toolbar -->
-			            <div class="panel panel-danger panel-den">
-			                <div class="panel-heading"><h6 class="panel-title"><i class="icon-rating3"></i> Denunciado</h6></div>
-			                <ul class="panel-toolbar">
-			                    <li><a class="search-modal"><i class="icon-search3"></i> Buscar</a></li>
-			                    <li><a ><i class="icon-plus"></i> Agregar</a></li>
-			                </ul>
+			            <div class="panel panel-danger panel-do">
+			                <div class="panel-heading">
+			                	<h6 class="panel-title"><i class="icon-rating3"></i> Denunciado</h6>
+			                	<div class="pull-right">
+				                	<a class="btn btn-xs btn-default">Buscar denunciado</a>
+				                	<a class="btn btn-xs btn-default">Agregar denunciado</a>
+			                	</div>
+		                	</div>
 			                <div class="table-responsive">
 								<table class="table table-bordered">
 									<thead>
@@ -100,41 +97,6 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>Row 1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
-										<tr>
-											<td>Row 1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
-										<tr>
-											<td>Row 1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
-										<tr>
-											<td>Row 1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
-										<tr>
-											<td>Row 1</td>
-											<td>Row 2</td>
-											<td>Row 3</td>
-											<td>Row 4</td>
-											<td>Row 5</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -155,7 +117,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h4 class="modal-title"><i class="icon-accessibility"></i> Buscar</h4>
+							<h4 class="modal-title"></h4>
 						</div>
 
 						<div class="modal-body with-padding">
@@ -178,16 +140,140 @@
 			</div>
 			<!-- /small modal -->
 			
-			<script>
-				$(".panel-den:first-child .search-modal").on("click", function(){
-					//$("#small_modal").modal("show");
-				});
-				
-				$(".panel-den:last-child .search-modal").on("click", function(){
-					//$("#small_modal").modal("show");
-					alert("hola");
-				});
-			</script>
-			
+			<!-- Form modal -->
+			<div id="form_modal" class="modal fade" tabindex="-1" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title"></h4>
+						</div>
+
+						<!-- Form inside modal -->
+						<form action="#" role="form">
+
+							<div class="modal-body with-padding">
+								<div class="block-inner text-danger">
+									<h6 class="heading-hr">Rellene el formulario</h6>
+								</div>
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-4">
+											<label>Nombres:</label>
+											<input type="text" class="form-control">
+										</div>
 	
+										<div class="col-sm-4">
+											<label>Apellido paterno:</label>
+											<input type="text" class="form-control">
+										</div>
+										
+										<div class="col-sm-4">
+											<label>Apellido materno:</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-6">
+			                                <label>Género:</label>
+		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
+		                                        <option value=""></option> 
+		                                        <c:forEach items="${findAllGender}" var="findAllG">
+		                                        <option value="${findAllG.genderId}"><c:out value="${findAllG.description}" /></option>
+		                                        </c:forEach>
+		                                    </select>
+	                                    </div>
+	                                    
+	                                    <div class="col-sm-6">
+											<label>Email:</label>
+											<input type="text" class="form-control">
+										</div>
+                                    </div>
+	                            </div>
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-6">
+											<label>Doc. de identidad:</label>
+		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
+		                                        <option value=""></option> 
+		                                        <c:forEach items="${findAllIdentityCard}" var="findAllIC">
+		                                        <option value="${findAllIC.identityCardId}"><c:out value="${findAllIC.acronym} - ${findAllIC.description}" /></option>
+		                                        </c:forEach>
+		                                    </select>
+										</div>
+
+										<div class="col-sm-6">
+											<label>Nº de documento:</label>
+											<input type="text" placeholder="building D, flat #67" class="form-control">
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-4">
+											<label>Departamento:</label>
+		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
+		                                        <option value=""></option> 
+		                                        <option value="Cambodia">Masculino</option> 
+		                                        <option value="Cameroon">Femenino</option> 
+		                                    </select>
+										</div>
+
+										<div class="col-sm-4">
+											<label>Provincia:</label>
+		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
+		                                        <option value=""></option> 
+		                                        <option value="Cambodia">Masculino</option> 
+		                                        <option value="Cameroon">Femenino</option> 
+		                                    </select>
+										</div>
+
+										<div class="col-sm-4">
+											<label>Distrito:</label>
+		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
+		                                        <option value=""></option> 
+		                                        <option value="Cambodia">Masculino</option> 
+		                                        <option value="Cameroon">Femenino</option> 
+		                                    </select>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-6">
+											<label>Dirección:</label>
+											<input type="text" class="form-control">
+										</div>
+
+										<div class="col-sm-3">
+											<label>Telf. principal:</label>
+											<input type="text" class="form-control">
+										</div>
+										
+										<div class="col-sm-3">
+											<label>Telf. secundario:</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+								<button type="button" class="btn btn-primary">Agregar</button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /form modal -->
+				
 	<c:import url="templates/ig-footer.jsp" />

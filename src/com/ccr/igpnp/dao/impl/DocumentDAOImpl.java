@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.ccr.igpnp.dao.DocumentDAO;
 import com.ccr.igpnp.model.DocumentDTO;
-import com.ccr.igpnp.model.Person;
+import com.ccr.igpnp.model.PersonDTO;
 import com.ccr.igpnp.util.ConnectDB;
 
 public class DocumentDAOImpl implements DocumentDAO {
@@ -24,12 +24,12 @@ public class DocumentDAOImpl implements DocumentDAO {
 			
         try {
 			cn = new ConnectDB().getConnectDB();
-			ps = cn.prepareStatement("EXECUTE findAllDocument");
+			ps = cn.prepareStatement("EXECUTE DocumentfindAll");
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
 		        DocumentDTO document = new DocumentDTO();
-		        Person person = new Person();
+		        PersonDTO person = new PersonDTO();
 		        
 		        // Document
 		        document.setDocumentId(rs.getInt(1));
