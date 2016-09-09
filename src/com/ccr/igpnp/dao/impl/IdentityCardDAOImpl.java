@@ -50,5 +50,37 @@ public class IdentityCardDAOImpl implements IdentityCardDAO {
     	return listIdentityCard;
     	
     }
+    
+    @Override
+    public IdentityCard findById(int identityCardId) {
+    	    	
+    	IdentityCard identityCard = null;
+    	
+    	try {
+    		
+    		cn = new ConnectDB().getConnectDB();
+			ps = cn.prepareStatement("SELECT * FROM IdentityCard WHERE identityCardId = ?");
+			ps.setInt(1, identityCardId);
+			rs = ps.executeQuery();
+			
+			identityCard = new IdentityCard();
+
+			while(rs.next()) {
+				identityCard.setIdentityCardId(rs.getInt(1));
+				identityCard.setDescription(rs.getString(2));
+				identityCard.setAcronym(rs.getString(3));
+			}
+			
+			cn.close();
+            ps.close();
+            rs.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+    	
+    	return identityCard;
+    	
+    }
 
 }

@@ -23,9 +23,9 @@
 	                                <input type="text" class="form-control">
 								</div>
 								
-								<div class="col-sm-3">
+								<div class="col-md-3">
 									<label>Tipo de documento: </label>
-	                                <select class="form-control" tabindex="2">
+	                                <select class="form-control" tabindex="2" required>
 	                                    <option value="" selected>Seleccionar</option> 
 	                                    <c:forEach items="${findAllIdentityCard}" var="findAllID">
 	                                    <option value="${findAllID.identityCardId}"><c:out value="${findAllID.description}" /></option>
@@ -63,10 +63,10 @@
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Nombre</th>
-											<th>Apellido</th>
-											<th>DNI</th>
-											<th>Eliminar</th>
+											<th>Nombres</th>
+											<th>Apellidos</th>
+											<th>Doc. de identidad</th>
+											<th>Nº Doc. de identidad<</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -89,11 +89,11 @@
 								<table class="table table-bordered">
 									<thead>
 										<tr>
-											<th>Column name</th>
-											<th>Column name</th>
-											<th>Column name</th>
-											<th>Column name</th>
-											<th>Column name</th>
+											<th>#</th>
+											<th>Nombres</th>
+											<th>Apellidos</th>
+											<th>Nº CIP</th>
+											<th>Acción</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -150,7 +150,7 @@
 						</div>
 
 						<!-- Form inside modal -->
-						<form action="#" role="form">
+						<form>
 
 							<div class="modal-body with-padding">
 								<div class="block-inner text-danger">
@@ -161,17 +161,17 @@
 									<div class="row">
 										<div class="col-sm-4">
 											<label>Nombres:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="nombres" class="form-control" required>
 										</div>
 	
 										<div class="col-sm-4">
 											<label>Apellido paterno:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="apPaterno" class="form-control" required>
 										</div>
 										
 										<div class="col-sm-4">
 											<label>Apellido materno:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="apMaterno" class="form-control" required>
 										</div>
 									</div>
 								</div>
@@ -180,8 +180,8 @@
 									<div class="row">
 										<div class="col-sm-6">
 			                                <label>Género:</label>
-		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
-		                                        <option value=""></option> 
+		                                    <select name="genero" class="form-control" required>
+		                                        <option value="">Seleccionar</option>
 		                                        <c:forEach items="${findAllGender}" var="findAllG">
 		                                        <option value="${findAllG.genderId}"><c:out value="${findAllG.description}" /></option>
 		                                        </c:forEach>
@@ -190,7 +190,7 @@
 	                                    
 	                                    <div class="col-sm-6">
 											<label>Email:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="email" class="form-control">
 										</div>
                                     </div>
 	                            </div>
@@ -199,8 +199,8 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<label>Doc. de identidad:</label>
-		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
-		                                        <option value=""></option> 
+		                                    <select class="form-control" name="docIdentidad" required>
+		                                        <option value="">Seleccionar</option> 
 		                                        <c:forEach items="${findAllIdentityCard}" var="findAllIC">
 		                                        <option value="${findAllIC.identityCardId}"><c:out value="${findAllIC.acronym} - ${findAllIC.description}" /></option>
 		                                        </c:forEach>
@@ -209,7 +209,7 @@
 
 										<div class="col-sm-6">
 											<label>Nº de documento:</label>
-											<input type="text" placeholder="building D, flat #67" class="form-control">
+											<input type="text" name="numDocIdentidad" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -218,28 +218,28 @@
 									<div class="row">
 										<div class="col-sm-4">
 											<label>Departamento:</label>
-		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
-		                                        <option value=""></option> 
-		                                        <option value="Cambodia">Masculino</option> 
-		                                        <option value="Cameroon">Femenino</option> 
+		                                    <select name="departamento" class="form-control" required>
+		                                        <option value="">Seleccionar</option> 
+		                                        <option value="1">Masculino</option> 
+		                                        <option value="2">Femenino</option> 
 		                                    </select>
 										</div>
 
 										<div class="col-sm-4">
 											<label>Provincia:</label>
-		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
-		                                        <option value=""></option> 
-		                                        <option value="Cambodia">Masculino</option> 
-		                                        <option value="Cameroon">Femenino</option> 
+		                                    <select name="provincia" class="form-control" required>
+		                                        <option value="">Seleccionar</option> 
+		                                        <option value="1">Masculino</option> 
+		                                        <option value="2">Femenino</option> 
 		                                    </select>
 										</div>
 
 										<div class="col-sm-4">
 											<label>Distrito:</label>
-		                                    <select data-placeholder="Seleccione una opción" class="select-full" tabindex="2">
-		                                        <option value=""></option> 
-		                                        <option value="Cambodia">Masculino</option> 
-		                                        <option value="Cameroon">Femenino</option> 
+		                                    <select name="distrito"  class="form-control" required>
+		                                        <option value="">Seleccionar</option> 
+		                                        <option value="1">Masculino</option> 
+		                                        <option value="2">Femenino</option> 
 		                                    </select>
 										</div>
 									</div>
@@ -249,17 +249,17 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<label>Dirección:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="direccion" class="form-control">
 										</div>
 
 										<div class="col-sm-3">
 											<label>Telf. principal:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="telfPrincipal" class="form-control">
 										</div>
 										
 										<div class="col-sm-3">
 											<label>Telf. secundario:</label>
-											<input type="text" class="form-control">
+											<input type="text" name="telfSecundario" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -267,7 +267,7 @@
 
 							<div class="modal-footer">
 								<button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
-								<button type="button" class="btn btn-primary">Agregar</button>
+								<button type="submit" class="btn btn-primary">Agregar</button>
 							</div>
 
 						</form>

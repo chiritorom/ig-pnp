@@ -42,6 +42,7 @@ public class AJAXLogin extends HttpServlet {
 
 		if(user != null) {
 			session.setAttribute("User", user);
+			
 			out.print("true");
 		} else {
 			out.print("false");

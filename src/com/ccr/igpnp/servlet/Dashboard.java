@@ -1,7 +1,6 @@
 package com.ccr.igpnp.servlet;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Index
+ * Servlet implementation class Dashboard
  */
-@WebServlet("/Index")
-public class Index extends HttpServlet {
+@WebServlet("/Dashboard")
+public class Dashboard extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Index() {
+    public Dashboard() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,17 +40,16 @@ public class Index extends HttpServlet {
 	}
 	
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		HttpSession session = request.getSession(true);
 		
 		if(session.getAttribute("User") != null) {
-			response.sendRedirect("/dashboard");
-		} else {
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
-
 		
+			request.setAttribute("breadcrumb", "Dashboard");
+			request.getRequestDispatcher("ig-principal.jsp").forward(request, response);
+		
+		} else {
+			request.getRequestDispatcher("404.jsp").forward(request, response);
+		}
 	}
-
 
 }

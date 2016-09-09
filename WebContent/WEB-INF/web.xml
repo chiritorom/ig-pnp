@@ -23,6 +23,10 @@
     <filter-name>UrlRewriteFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+  </error-page>
   <servlet>
     <servlet-name>Index</servlet-name>
     <servlet-class>com.ccr.igpnp.servlet.Index</servlet-class>
@@ -31,13 +35,28 @@
     <servlet-name>Index</servlet-name>
     <url-pattern>/index.jsp</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-    <servlet-name>AJAXLogin</servlet-name>
-    <servlet-class>com.ccr.igpnp.servlet.AJAXLogin</servlet-class>
+    <servlet-name>Dashboard</servlet-name>
+    <servlet-class>com.ccr.igpnp.servlet.Dashboard</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AJAXLogin</servlet-name>
-    <url-pattern>/IG-PNP/AJAXLogin</url-pattern>
+    <servlet-name>Dashboard</servlet-name>
+    <url-pattern>/dashboard</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BandejaExpediente</servlet-name>
+    <servlet-class>com.ccr.igpnp.servlet.BandejaExpediente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BandejaExpediente</servlet-name>
+    <url-pattern>/bandeja-de-expedientes</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CrearExpediente</servlet-name>
+    <servlet-class>com.ccr.igpnp.servlet.CrearExpediente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CrearExpediente</servlet-name>
+    <url-pattern>/crear-expediente</url-pattern>
   </servlet-mapping>
 </web-app>

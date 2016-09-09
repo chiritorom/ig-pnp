@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.ccr.igpnp.dao.UserDAO;
+import com.ccr.igpnp.model.PersonDTO;
 import com.ccr.igpnp.model.UserDTO;
 import com.ccr.igpnp.util.ConnectDB;
 
@@ -21,7 +22,7 @@ public class UserDAOImpl implements UserDAO {
 		
 		try {
 			cn = new ConnectDB().getConnectDB();
-			ps = cn.prepareStatement("SELECT * FROM [User] WHERE username = ? AND password = ?");
+			ps = cn.prepareStatement("SELECT * FROM [User] us INNER JOIN Person pe ON pe.personId = us.personId  WHERE username = ? AND password = ?");
 			ps.setString(1, username);
 			ps.setString(2, password);
 			rs = ps.executeQuery();
@@ -29,8 +30,12 @@ public class UserDAOImpl implements UserDAO {
 			while(rs.next()) {
 				
 				user = new UserDTO();
+				PersonDTO person = new PersonDTO();
+				
+				person.setFirstName(rs.getString(8));
 				
 				user.setUserId(rs.getInt(1));
+				user.setPerson(person);
 				user.setUsername(rs.getString(3));
 			}
 			cn.close();

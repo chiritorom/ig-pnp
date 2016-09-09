@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Index
+ * Servlet implementation class Logout
  */
-@WebServlet("/Index")
-public class Index extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Index() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,17 +41,15 @@ public class Index extends HttpServlet {
 	}
 	
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		HttpSession session = request.getSession(true);
-		
-		if(session.getAttribute("User") != null) {
-			response.sendRedirect("/dashboard");
-		} else {
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+		response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession();
+        
+        if(session.getAttribute("User") != null) {
+	    	session.invalidate();
+	    	response.sendRedirect("/");
+        } else {
+			request.getRequestDispatcher("404.jsp").forward(request, response);
 		}
-
-		
 	}
-
 
 }

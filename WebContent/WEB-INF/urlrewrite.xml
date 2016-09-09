@@ -6,9 +6,9 @@
 
 <urlrewrite>
 
-    <rule >
+    <!-- <rule >
         <from>^/([a-zA-Z0-9-]+)/?$</from>
         <to>index.jsp?page=$1</to>
-    </rule>
+    </rule> -->
 
 </urlrewrite>
